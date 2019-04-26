@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyparser.json());
 
 // Change the below URL as per your database end point. In this case, it is mongo db deployed on AWS EC2 instance.
-mongoose.connect('mongodb://ec2-user@3.87.173.234:27017/students');
+mongoose.connect('mongodb://ec2-user@<ip-address-of-ec2>:27017/students');
 const connection = mongoose.connection;
 
 connection.once('open',() => {
